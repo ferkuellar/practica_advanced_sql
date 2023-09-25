@@ -139,7 +139,8 @@ JOIN keepcoding.ivr_steps s ON m.ivr_id = s.ivr_id AND m.module_sequece = s.modu
 
 El objetivo de este script es crear una tabla intermedia (`ivr_intermediate`) que extraiga información relevante de la tabla `ivr_detail`. En particular, se calculan dos indicadores clave: `repeated_phone_24H` y `cause_recall_phone_24H`.
 
-# [Datos ivr_intermediate](ivr_intermediate.csv)
+## Presiona el titulo Datos ivr_intremediate para accesar al reporte CSV.
+### [Datos ivr_intermediate](ivr_intermediate.csv)
 
 ## Código SQL
 
