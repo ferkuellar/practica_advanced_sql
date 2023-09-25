@@ -31,10 +31,6 @@ El objetivo principal del proyecto es desarrollar un modelo de datos robusto y e
    - [Detalles del Formato](#detalles-del-formato)
    - [Cómo se Calculan](#cómo-se-calculan)
 
-<!-- Contenido del documento -->
-
-
-
 ## Estructura de Datos
 
 Se parte de tres fuentes de datos principales:
