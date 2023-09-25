@@ -65,6 +65,8 @@ Una tabla detallada se crea mediante una consulta JOIN que une las tablas `ivr_c
 
 El objetivo de este script es crear una tabla detallada (`ivr_detail`) que combine información de las tablas `ivr_calls`, `ivr_modules`, y `ivr_steps`. Esta tabla servirá como una fuente única de verdad para análisis posteriores.
 
+[Tablas ivr_detail](ivr_detail.csv)
+
 ## Código SQL
 
 ```sql
