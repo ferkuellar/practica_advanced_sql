@@ -1,5 +1,9 @@
 # Proyecto de Analítica de Interacción con IVR (Respuesta de Voz Interactiva)
 
+## Objetivo del Proyecto
+
+El objetivo principal del proyecto es desarrollar un modelo de datos robusto y eficiente que permita analizar y comprender las interacciones del cliente a través del sistema IVR (Respuesta de Voz Interactiva).
+
 ## Índice
 
 1. [Objetivo del Proyecto](#objetivo-del-proyecto)
@@ -41,11 +45,6 @@
     - [Ejemplos de Uso](#ejemplos-de-uso)
     - [Casos de Uso](#casos-de-uso)
     - [Precauciones](#precauciones)
-
-
-## Objetivo del Proyecto
-
-El objetivo principal del proyecto es desarrollar un modelo de datos robusto y eficiente que permita analizar y comprender las interacciones del cliente a través del sistema IVR (Respuesta de Voz Interactiva).
 
 ## Estructura de Datos
 
