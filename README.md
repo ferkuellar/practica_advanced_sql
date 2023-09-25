@@ -4,10 +4,6 @@
 
 El objetivo principal del proyecto es desarrollar un modelo de datos robusto y eficiente que permita analizar y comprender las interacciones del cliente a través del sistema IVR (Respuesta de Voz Interactiva).
 
-## Objetivo del Proyecto
-
-El objetivo principal del proyecto es desarrollar un modelo de datos robusto y eficiente que permita analizar y comprender las interacciones del cliente a través del sistema IVR (Respuesta de Voz Interactiva).
-
 ## Índice
 
 1. [Objetivo del Proyecto](#objetivo-del-proyecto)
@@ -165,15 +161,11 @@ FROM keepcoding.ivr_detail;
 
 Se introducen campos como `repeated_phone_24H` y `cause_recall_phone_24H` para rastrear el comportamiento del cliente, lo que es crucial para futuras estrategias de atención al cliente.
 
-### Tabla de Resumen (`ivr_summary`)
-
-A partir de la tabla detallada, se genera una tabla de resumen que recopila indicadores clave de rendimiento (KPIs) y otros datos relevantes por llamada.
-
 ### Funciones de Limpieza
 
 Para manejar valores nulos y otros problemas de calidad de datos, se implementan funciones de limpieza, como `clean_integer`.
 
-# Documentación de la Función `clean_integer`
+# Función `clean_integer`
 
 ## Descripción General
 
@@ -270,6 +262,10 @@ CAST(FORMAT_TIMESTAMP('%Y%m%d', TIMESTAMP(calls_end_date)) AS INT64) AS calls_en
 
 La tabla `ivr_summary` es una tabla de resumen que consolida la información más relevante de las interacciones de los clientes a través del sistema IVR (Respuesta de Voz Interactiva). Esta tabla se deriva de la tabla `ivr_detail` y se centra en proporcionar un registro único por llamada con indicadores clave para el análisis y la toma de decisiones.
 
+## Objetivo
+
+El objetivo de este script es crear una tabla de resumen (`ivr_summary`) que sintetiza la información más relevante de las llamadas y las interacciones del cliente en el IVR. Esta tabla se basa en los datos ya compilados en las tablas `ivr_detail` e `ivr_intermediate`.
+
 ## Estructura de la Tabla
 
 A continuación se describen los campos que componen la tabla `ivr_summary`:
@@ -304,10 +300,6 @@ A continuación se describen los campos que componen la tabla `ivr_summary`:
 - **Segmentación del Cliente**: Campos como `customer_segment` y `ivr_language` son vitales para realizar una segmentación más precisa de la base de clientes.
 
 # Creación de la Tabla `ivr_summary` en SQL
-
-## Objetivo
-
-El objetivo de este script es crear una tabla de resumen (`ivr_summary`) que sintetiza la información más relevante de las llamadas y las interacciones del cliente en el IVR. Esta tabla se basa en los datos ya compilados en las tablas `ivr_detail` e `ivr_intermediate`.
 
 ## Código SQL
 
