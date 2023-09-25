@@ -65,6 +65,8 @@ Una tabla detallada se crea mediante una consulta JOIN que une las tablas `ivr_c
 
 # Creación de la Tabla ivr_detail en SQL
 
+![Diagrama ER](ivr_detail.png)
+
 ## Objetivo
 
 El objetivo de este script es crear una tabla detallada (`ivr_detail`) que combine información de las tablas `ivr_calls`, `ivr_modules`, y `ivr_steps`. Esta tabla servirá como una fuente única de verdad para análisis posteriores.
@@ -136,6 +138,8 @@ JOIN keepcoding.ivr_steps s ON m.ivr_id = s.ivr_id AND m.module_sequece = s.modu
 - `billing_account_id`: ID de la cuenta de facturación del cliente, si se identifica.
 
 # Creación de la Tabla ivr_intermediate en SQL
+
+![Diagrama ER](ivr_intermediate.png)
 
 ## Objetivo
 
@@ -269,6 +273,8 @@ CAST(FORMAT_TIMESTAMP('%Y%m%d', TIMESTAMP(calls_end_date)) AS INT64) AS calls_en
 ```
 
 # Documentación de la Tabla `ivr_summary`
+
+![Diagrama ER](ivr_summary.png)
 
 ## Introducción
 
