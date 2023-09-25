@@ -15,13 +15,13 @@ El objetivo principal del proyecto es desarrollar un modelo de datos robusto y e
    - [Creación de Tablas](#creación-de-tablas)
    - [Tabla Detallada (ivr_detail)](#tabla-detallada-ivr_detail)
 4. [Creación de la Tabla ivr_detail en SQL](#creación-de-la-tabla-ivr_detail-en-sql)
-   - [Objetivo](#objetivo)
-   - [Código SQL](#código-sql)
-   - [Explicación de Campos](#explicación-de-campos)
+   - [Objetivo de ivr_detail](#objetivo-de-ivr_detail)
+   - [Código SQL de ivr_detail](#código-sql-de-ivr_detail)
+   - [Explicación de Campos de ivr_detail](#explicación-de-campos-de-ivr_detail)
 5. [Creación de la Tabla ivr_intermediate en SQL](#creación-de-la-tabla-ivr_intermediate-en-sql)
-   - [Objetivo](#objetivo-1)
-   - [Código SQL](#código-sql-1)
-   - [Explicación de Campos](#explicación-de-campos-1)
+   - [Objetivo de ivr_intermediate](#objetivo-de-ivr_intermediate)
+   - [Código SQL de ivr_intermediate](#código-sql-de-ivr_intermediate)
+   - [Explicación de Campos de ivr_intermediate](#explicación-de-campos-de-ivr_intermediate)
 6. [Tabla de Resumen (ivr_summary)](#tabla-de-resumen-ivr_summary)
    - [Funciones de Limpieza](#funciones-de-limpieza)
    - [Indicadores de Comportamiento del Cliente](#indicadores-de-comportamiento-del-cliente)
@@ -30,21 +30,21 @@ El objetivo principal del proyecto es desarrollar un modelo de datos robusto y e
    - [Detalles del Formato](#detalles-del-formato)
    - [Cómo se Calculan](#cómo-se-calculan)
 9. [Documentación de la Tabla ivr_summary](#documentación-de-la-tabla-ivr_summary)
-   - [Introducción](#introducción)
-   - [Estructura de la Tabla](#estructura-de-la-tabla)
-   - [Utilidades de la Tabla](#utilidades-de-la-tabla)
+   - [Introducción de ivr_summary](#introducción-de-ivr_summary)
+   - [Estructura de la Tabla de ivr_summary](#estructura-de-la-tabla-de-ivr_summary)
+   - [Utilidades de la Tabla de ivr_summary](#utilidades-de-la-tabla-de-ivr_summary)
 10. [Creación de la Tabla ivr_summary en SQL](#creación-de-la-tabla-ivr_summary-en-sql)
-    - [Objetivo](#objetivo-2)
-    - [Código SQL](#código-sql-2)
+    - [Objetivo de ivr_summary](#objetivo-de-ivr_summary)
+    - [Código SQL de ivr_summary](#código-sql-de-ivr_summary)
 11. [Documentación de la Función clean_integer](#documentación-de-la-función-clean_integer)
-    - [Descripción General](#descripción-general)
-    - [Objetivo](#objetivo-3)
-    - [Código SQL](#código-sql-3)
-    - [Parámetros](#parámetros)
-    - [Valor de Retorno](#valor-de-retorno)
-    - [Ejemplos de Uso](#ejemplos-de-uso)
-    - [Casos de Uso](#casos-de-uso)
-    - [Precauciones](#precauciones)
+    - [Descripción General de clean_integer](#descripción-general-de-clean_integer)
+    - [Objetivo de clean_integer](#objetivo-de-clean_integer)
+    - [Código SQL de clean_integer](#código-sql-de-clean_integer)
+    - [Parámetros de clean_integer](#parámetros-de-clean_integer)
+    - [Valor de Retorno de clean_integer](#valor-de-retorno-de-clean_integer)
+    - [Ejemplos de Uso de clean_integer](#ejemplos-de-uso-de-clean_integer)
+    - [Casos de Uso de clean_integer](#casos-de-uso-de-clean_integer)
+    - [Precauciones con clean_integer](#precauciones-con-clean_integer)
 
 ## Estructura de Datos
 
@@ -172,6 +172,9 @@ FROM keepcoding.ivr_detail;
 - **repeated_phone_24H**: Indicador que toma el valor 1 si el mismo número de teléfono ha realizado otra llamada en las 24 horas anteriores, y 0 en caso contrario.
 - **cause_recall_phone_24H**: Indicador que toma el valor 1 si el mismo número de teléfono realiza otra llamada en las 24 horas posteriores, y 0 en caso contrario.
 
+### Indicadores de Comportamiento del Cliente
+
+Se introducen campos como `repeated_phone_24H` y `cause_recall_phone_24H` para rastrear el comportamiento del cliente, lo que es crucial para futuras estrategias de atención al cliente.
 
 ### Tabla de Resumen (`ivr_summary`)
 
@@ -181,9 +184,72 @@ A partir de la tabla detallada, se genera una tabla de resumen que recopila indi
 
 Para manejar valores nulos y otros problemas de calidad de datos, se implementan funciones de limpieza, como `clean_integer`.
 
-### Indicadores de Comportamiento del Cliente
 
-Se introducen campos como `repeated_phone_24H` y `cause_recall_phone_24H` para rastrear el comportamiento del cliente, lo que es crucial para futuras estrategias de atención al cliente.
+## Documentación de la Función `clean_integer`
+
+## Descripción General
+
+La función `clean_integer` es una función SQL personalizada diseñada para manejar valores enteros que pueden ser nulos. En caso de recibir un valor `NULL`, la función devuelve un valor predeterminado de `-999999`.
+
+## Definición de la Función
+
+La función se define de la siguiente manera en SQL:
+
+```sql
+CREATE OR REPLACE FUNCTION keepcoding.clean_integer(input_value INT64) 
+RETURNS INT64 
+AS (
+  IF(input_value IS NULL, -999999, input_value)
+);
+```
+
+# Documentación de la Función `clean_integer`
+
+## Descripción General
+
+La función `clean_integer` es una función SQL personalizada diseñada para tratar valores enteros que pueden ser nulos. Si se recibe un valor `NULL`, la función devuelve un valor predeterminado de `-999999`.
+
+## Objetivo
+
+Crear una función llamada `clean_integer` en el dataset `keepcoding` que se encargue de limpiar valores enteros, devolviendo un valor por defecto en caso de que el valor entrante sea NULL.
+
+## Código SQL
+
+```sql
+CREATE OR REPLACE FUNCTION keepcoding.clean_integer(input_value INT64) 
+RETURNS INT64 
+AS (
+  IF(input_value IS NULL, -999999, input_value)
+);
+```
+
+## Parámetros
+
+| Parámetro     | Tipo  | Descripción                                                |
+|---------------|-------|------------------------------------------------------------|
+| `input_value` | INT64 | Valor entero que se desea limpiar. Puede ser nulo.         |
+
+## Valor de Retorno
+
+- **Tipo**: INT64
+- **Descripción**: Devuelve el mismo valor entero si `input_value` no es nulo. Si `input_value` es nulo, devuelve `-999999`.
+
+## Ejemplos de Uso
+
+```sql
+SELECT keepcoding.clean_integer(NULL);  -- Devolverá -999999
+SELECT keepcoding.clean_integer(5);     -- Devolverá 5
+```
+
+## Casos de Uso
+
+- **Limpieza de Datos**: Útil para limpiar datos antes de realizar análisis, especialmente cuando se trabajan con grandes sets de datos donde los valores nulos pueden ser problemáticos.
+
+- **Normalización**: Facilita la normalización de los datos al asignar un valor predeterminado a los registros nulos, lo que permite realizar análisis más consistentes.
+
+## Precauciones
+
+- Asegúrese de entender el impacto de reemplazar los valores nulos con `-999999` en su análisis específico.
 
 ## Descripción de Campos en Tablas del Proyecto IVR
 
@@ -318,69 +384,3 @@ GROUP BY
   d.calls_customer_segment,
   d.calls_ivr_language;
 ```
-
-# Documentación de la Función `clean_integer`
-
-## Descripción General
-
-La función `clean_integer` es una función SQL personalizada diseñada para manejar valores enteros que pueden ser nulos. En caso de recibir un valor `NULL`, la función devuelve un valor predeterminado de `-999999`.
-
-## Definición de la Función
-
-La función se define de la siguiente manera en SQL:
-
-```sql
-CREATE OR REPLACE FUNCTION keepcoding.clean_integer(input_value INT64) 
-RETURNS INT64 
-AS (
-  IF(input_value IS NULL, -999999, input_value)
-);
-```
-
-# Documentación de la Función `clean_integer`
-
-## Descripción General
-
-La función `clean_integer` es una función SQL personalizada diseñada para tratar valores enteros que pueden ser nulos. Si se recibe un valor `NULL`, la función devuelve un valor predeterminado de `-999999`.
-
-## Objetivo
-
-Crear una función llamada `clean_integer` en el dataset `keepcoding` que se encargue de limpiar valores enteros, devolviendo un valor por defecto en caso de que el valor entrante sea NULL.
-
-## Código SQL
-
-```sql
-CREATE OR REPLACE FUNCTION keepcoding.clean_integer(input_value INT64) 
-RETURNS INT64 
-AS (
-  IF(input_value IS NULL, -999999, input_value)
-);
-```
-
-## Parámetros
-
-| Parámetro     | Tipo  | Descripción                                                |
-|---------------|-------|------------------------------------------------------------|
-| `input_value` | INT64 | Valor entero que se desea limpiar. Puede ser nulo.         |
-
-## Valor de Retorno
-
-- **Tipo**: INT64
-- **Descripción**: Devuelve el mismo valor entero si `input_value` no es nulo. Si `input_value` es nulo, devuelve `-999999`.
-
-## Ejemplos de Uso
-
-```sql
-SELECT keepcoding.clean_integer(NULL);  -- Devolverá -999999
-SELECT keepcoding.clean_integer(5);     -- Devolverá 5
-```
-
-## Casos de Uso
-
-- **Limpieza de Datos**: Útil para limpiar datos antes de realizar análisis, especialmente cuando se trabajan con grandes sets de datos donde los valores nulos pueden ser problemáticos.
-
-- **Normalización**: Facilita la normalización de los datos al asignar un valor predeterminado a los registros nulos, lo que permite realizar análisis más consistentes.
-
-## Precauciones
-
-- Asegúrese de entender el impacto de reemplazar los valores nulos con `-999999` en su análisis específico.
