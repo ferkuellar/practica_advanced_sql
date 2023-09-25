@@ -1,6 +1,8 @@
 # Proyecto de Analítica de Interacción con IVR (Respuesta de Voz Interactiva)
 
-# [Querys IVR para creacion de tablas Intermediate, Details, Summary](https://console.cloud.google.com/bigquery?sq=658206446308:b4997ad7d40b446fbe59743d23fa348a)
+## Presiona el titulo Querys IVR para accesar a la Consola de Bigquery.
+### [Querys IVR para creacion de tablas Intermediate, Details, Summary](https://console.cloud.google.com/bigquery?sq=658206446308:b4997ad7d40b446fbe59743d23fa348a)
+
 
 ## Objetivo del Proyecto
 
