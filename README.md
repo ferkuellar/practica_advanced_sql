@@ -65,7 +65,7 @@ Una tabla detallada se crea mediante una consulta JOIN que une las tablas `ivr_c
 
 El objetivo de este script es crear una tabla detallada (`ivr_detail`) que combine información de las tablas `ivr_calls`, `ivr_modules`, y `ivr_steps`. Esta tabla servirá como una fuente única de verdad para análisis posteriores.
 
-[Tablas ivr_detail](ivr_detail.csv)
+[Datos ivr_detail](ivr_detail.csv)
 
 ## Código SQL
 
@@ -135,6 +135,8 @@ JOIN keepcoding.ivr_steps s ON m.ivr_id = s.ivr_id AND m.module_sequece = s.modu
 ## Objetivo
 
 El objetivo de este script es crear una tabla intermedia (`ivr_intermediate`) que extraiga información relevante de la tabla `ivr_detail`. En particular, se calculan dos indicadores clave: `repeated_phone_24H` y `cause_recall_phone_24H`.
+
+[Datos ivr_intermediate](ivr_intermediate.csv)
 
 ## Código SQL
 
@@ -304,6 +306,8 @@ A continuación se describen los campos que componen la tabla `ivr_summary`:
 - **Segmentación del Cliente**: Campos como `customer_segment` y `ivr_language` son vitales para realizar una segmentación más precisa de la base de clientes.
 
 # Creación de la Tabla `ivr_summary` en SQL
+
+[Datos ivr_summary](ivr_summary.csv)
 
 ## Código SQL
 
