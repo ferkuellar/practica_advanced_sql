@@ -311,7 +311,9 @@ A continuación se describen los campos que componen la tabla `ivr_summary`:
 
 # Creación de la Tabla `ivr_summary` en SQL
 
-# [Datos ivr_summary](ivr_summary.csv)
+
+## Presiona el titulo Datos ivr_summary para accesar al reporte CSV.
+### [Datos ivr_summary](ivr_summary.csv)
 
 ## Código SQL
 
