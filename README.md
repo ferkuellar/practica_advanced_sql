@@ -4,6 +4,10 @@
 
 El objetivo principal del proyecto es desarrollar un modelo de datos robusto y eficiente que permita analizar y comprender las interacciones del cliente a través del sistema IVR (Respuesta de Voz Interactiva).
 
+## Objetivo del Proyecto
+
+El objetivo principal del proyecto es desarrollar un modelo de datos robusto y eficiente que permita analizar y comprender las interacciones del cliente a través del sistema IVR (Respuesta de Voz Interactiva).
+
 ## Índice
 
 1. [Objetivo del Proyecto](#objetivo-del-proyecto)
@@ -13,7 +17,7 @@ El objetivo principal del proyecto es desarrollar un modelo de datos robusto y e
    - [ivr_steps](#ivr_steps)
 3. [Proceso de Modelado de Datos](#proceso-de-modelado-de-datos)
    - [Creación de Tablas](#creación-de-tablas)
-   - [Tabla Detallada (ivr_detail)](#tabla-detallada-ivr_detail)
+   - [Tabla Detallada (`ivr_detail`)](#tabla-detallada-ivr_detail)
 4. [Creación de la Tabla ivr_detail en SQL](#creación-de-la-tabla-ivr_detail-en-sql)
    - [Objetivo](#objetivo-1)
    - [Código SQL](#código-sql)
@@ -22,10 +26,10 @@ El objetivo principal del proyecto es desarrollar un modelo de datos robusto y e
    - [Objetivo](#objetivo-2)
    - [Código SQL](#código-sql-1)
    - [Explicación de Campos](#explicación-de-campos-1)
-6. [Tabla de Resumen (ivr_summary)](#tabla-de-resumen-ivr_summary)
+6. [Tabla de Resumen (`ivr_summary`)](#tabla-de-resumen-ivr_summary)
    - [Funciones de Limpieza](#funciones-de-limpieza)
    - [Indicadores de Comportamiento del Cliente](#indicadores-de-comportamiento-del-cliente)
-7. [Documentación de la Función clean_integer](#documentación-de-la-función-clean_integer)
+7. [Documentación de la Función `clean_integer`](#documentación-de-la-función-clean_integer)
 8. [Descripción de Campos en Tablas del Proyecto IVR](#descripción-de-campos-en-tablas-del-proyecto-ivr)
 9. [Campos de Fecha Calculados](#campos-de-fecha-calculados)
    - [Detalles del Formato](#detalles-del-formato)
@@ -168,25 +172,6 @@ A partir de la tabla detallada, se genera una tabla de resumen que recopila indi
 ### Funciones de Limpieza
 
 Para manejar valores nulos y otros problemas de calidad de datos, se implementan funciones de limpieza, como `clean_integer`.
-
-
-## Documentación de la Función `clean_integer`
-
-## Descripción General
-
-La función `clean_integer` es una función SQL personalizada diseñada para manejar valores enteros que pueden ser nulos. En caso de recibir un valor `NULL`, la función devuelve un valor predeterminado de `-999999`.
-
-## Definición de la Función
-
-La función se define de la siguiente manera en SQL:
-
-```sql
-CREATE OR REPLACE FUNCTION keepcoding.clean_integer(input_value INT64) 
-RETURNS INT64 
-AS (
-  IF(input_value IS NULL, -999999, input_value)
-);
-```
 
 # Documentación de la Función `clean_integer`
 
