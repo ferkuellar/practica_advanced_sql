@@ -6,16 +6,36 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 ## Índice
 
-- [Modelo de Datos](#modelo-de-datos)
-- [Características](#características)
-- [Tabla ivr_detail](#Tabla-ivr_detail)
-- [Campos Calculados ivr_detail](#Campos-Calculados-en-ivr_detail)
-- [Tabla ivr_summary](#Tabla-ivr_summary)
-- [Campos en ivr_summary](#Campos-en-ivr_summary)
-- [Requisitos](#requisitos)
-- [Uso](#uso)
-- [Contribuidores](#contribuidores)
-- [Licencia](#licencia)
+# Índice
+
+1. [Modelo de Datos](#Modelo-de-Datos)
+   - [ivr_calls](#ivr_calls)
+   - [ivr_modules](#ivr_modules)
+   - [ivr_steps](#ivr_steps)
+2. [Características](#Características)
+3. [Tabla ivr_detail](#Tabla-ivr_detail)
+   - [Origen de Datos](#Origen-de-Datos)
+   - [Relaciones](#Relaciones)
+   - [Campos en ivr_detail](#Campos-en-ivr_detail)
+   - [Campos Calculados en ivr_detail](#Campos-Calculados-en-ivr_detail)
+4. [Tabla ivr_summary](#Tabla-ivr_summary)
+   - [Propósito](#Propósito)
+   - [Características](#Características-1)
+   - [Relación con ivr_detail](#Relación-con-ivr_detail)
+   - [Campos en ivr_summary](#Campos-en-ivr_summary)
+5. [Función clean_integer](#Función-clean_integer)
+   - [Descripción](#Descripción)
+   - [Uso](#Uso)
+   - [Implementación en BigQuery](#Implementación-en-BigQuery)
+6. [Requisitos](#Requisitos)
+7. [Uso](#Uso-1)
+   - [Clonar Repositorio](#Clonar-Repositorio)
+   - [Ejecutar Scripts de SQL](#Ejecutar-Scripts-de-SQL)
+   - [Importar Datos](#Importar-Datos)
+   - [Ejecutar Análisis](#Ejecutar-Análisis)
+8. [Contribuidores](#Contribuidores)
+9. [Licencia](#Licencia)
+
 
 ## Modelo de Datos
 
