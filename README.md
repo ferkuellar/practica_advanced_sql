@@ -36,6 +36,9 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 8. [Contribuidores](#Contribuidores)
 9. [Licencia](#Licencia)
 
+Para acceder al proyecto en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:532ffec5d5d444b8a8ce5c8c03fc332b).
+
+
 
 ## Modelo de Datos
 
