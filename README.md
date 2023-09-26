@@ -8,6 +8,8 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 - [Modelo de Datos](#modelo-de-datos)
 - [Características](#características)
+- [Tabla ivr_detail](#CamposCalculadosenivr_detail)
+- [Campos Calculados ivr_detail](#Tabla-ivr_detail)
 - [Requisitos](#requisitos)
 - [Uso](#uso)
 - [Contribuidores](#contribuidores)
@@ -129,8 +131,6 @@ Estos son campos calculados que representan las fechas de inicio y finalización
 | calls_end_date_id  | ivr_calls    | Identificador calculado para la fecha de finalización de la llamada. Formato yyyymmdd. Ejemplo: `20230101` para el 1 de enero de 2023. |
 
 Estos campos son útiles para realizar análisis de series temporales o para unir la tabla `ivr_detail` con otras tablas que utilicen un formato de fecha similar.
-
-
 
 ## Requisitos
 
