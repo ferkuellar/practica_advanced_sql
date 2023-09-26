@@ -8,35 +8,32 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 # Índice
 
-1. [Modelo de Datos](#Modelo-de-Datos)
+## Índice
+
+- [Acceso a Tablas y Funciones en Google Cloud BigQuery](#acceso-a-tablas-y-funciones-en-google-cloud-bigquery)
+1. [Modelo de Datos](#modelo-de-datos)
    - [ivr_calls](#ivr_calls)
    - [ivr_modules](#ivr_modules)
    - [ivr_steps](#ivr_steps)
-2. [Características](#Características)
-3. [Tabla ivr_detail](#Tabla-ivr_detail)
-   - [Origen de Datos](#Origen-de-Datos)
-   - [Relaciones](#Relaciones)
-   - [Campos en ivr_detail](#Campos-en-ivr_detail)
-   - [Campos Calculados en ivr_detail](#Campos-Calculados-en-ivr_detail)
-4. [Tabla ivr_summary](#Tabla-ivr_summary)
-   - [Propósito](#Propósito)
-   - [Características](#Características-1)
-   - [Relación con ivr_detail](#Relación-con-ivr_detail)
-   - [Campos en ivr_summary](#Campos-en-ivr_summary)
-5. [Función clean_integer](#Función-clean_integer)
-   - [Descripción](#Descripción)
-   - [Uso](#Uso)
-   - [Implementación en BigQuery](#Implementación-en-BigQuery)
-6. [Requisitos](#Requisitos)
-7. [Uso](#Uso-1)
-   - [Clonar Repositorio](#Clonar-Repositorio)
-   - [Ejecutar Scripts de SQL](#Ejecutar-Scripts-de-SQL)
-   - [Importar Datos](#Importar-Datos)
-   - [Ejecutar Análisis](#Ejecutar-Análisis)
-8. [Contribuidores](#Contribuidores)
-9. [Licencia](#Licencia)
-
-
+2. [Características](#características)
+3. [Tabla ivr_detail](#tabla-ivr_detail)
+   - [Origen de Datos](#origen-de-datos)
+   - [Relaciones](#relaciones)
+   - [Campos en ivr_detail](#campos-en-ivr_detail)
+   - [Campos Calculados en ivr_detail](#campos-calculados-en-ivr_detail)
+4. [Tabla ivr_summary](#tabla-ivr_summary)
+   - [Propósito](#propósito)
+   - [Características](#características)
+   - [Relación con ivr_detail](#relación-con-ivr_detail)
+   - [Campos en ivr_summary](#campos-en-ivr_summary)
+5. [Función clean_integer](#función-clean_integer)
+   - [Descripción](#descripción)
+   - [Uso](#uso)
+   - [Implementación en BigQuery](#implementación-en-bigquery)
+6. [Requisitos](#requisitos)
+7. [Uso](#uso)
+8. [Contribuidores](#contribuidores)
+9. [Licencia](#licencia)
 
 ## Acceso a Tablas y Funciones en Google Cloud BigQuery
 
