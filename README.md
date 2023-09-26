@@ -181,6 +181,34 @@ La tabla `ivr_summary` contiene los siguientes campos:
 
 Cada uno de estos campos se extrae o calcula a partir de los datos en la tabla `ivr_detail`, permitiendo un análisis más sencillo y focalizado de las métricas clave de rendimiento del sistema IVR.
 
+## Función clean_integer
+
+### Descripción
+
+La función `clean_integer` es una utilidad de limpieza de datos diseñada para manejar valores enteros `null` en las tablas de nuestra base de datos. Si la función recibe un valor `null`, devuelve -999999 como valor predeterminado. Esta convención es especialmente útil para mantener la integridad de los datos y facilitar el análisis posterior.
+
+### Uso
+
+La función se puede usar en consultas SQL para reemplazar valores `null` en columnas de enteros, de la siguiente manera:
+
+```sql
+SELECT clean_integer(columna_entera) FROM nombre_tabla;
+```
+
+### Implementación en BigQuery
+La implementación de esta función en BigQuery podría ser algo similar a:
+
+```sql
+CREATE OR REPLACE FUNCTION dataset_name.clean_integer(input INT64) AS (
+  IF(input IS NULL, -999999, input)
+);
+```
+
+Para usar esta función en tus consultas dentro del mismo dataset, simplemente la llamas como `clean_integer(your_integer_column)`.
+
+Al utilizar esta función en sus consultas, puede estar seguro de que cualquier valor null se reemplazará con el valor `-999999`, facilitando así los análisis y evitando errores potenciales relacionados con la falta de manejo de valores `null`.
+
+
 ## Requisitos
 
 - Sistema de base de datos compatible con SQL
