@@ -151,7 +151,34 @@ El objetivo de la tabla `ivr_summary` es agilizar el análisis de KPIs (Indicado
 
 La tabla `ivr_summary` se deriva de la tabla `ivr_detail` y puede ser creada mediante consultas de agregación que resuman los campos relevantes de `ivr_detail` en un solo registro por `ivr_id`.
 
+### Campos en ivr_summary
 
+La tabla `ivr_summary` contiene los siguientes campos:
+
+| Campo                    | Origen       | Descripción                                                                                                           |
+|--------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------|
+| ivr_id                   | ivr_detail   | Identificador único de la llamada                                                                                     |
+| phone_number             | ivr_detail   | Número de teléfono del cliente                                                                                        |
+| ivr_result               | ivr_detail   | Resultado general de la llamada                                                                                       |
+| vdn_aggregation          | ivr_detail   | Generalización del campo `vdn_label` (FRONT para ATC, TECH para TECH, ABSORPTION para ABSORPTION, RESTO para otros)   |
+| start_date               | ivr_detail   | Fecha y hora de inicio de la llamada                                                                                  |
+| end_date                 | ivr_detail   | Fecha y hora de finalización de la llamada                                                                            |
+| total_duration           | ivr_detail   | Duración total de la llamada en segundos                                                                              |
+| customer_segment         | ivr_detail   | Segmento al que pertenece el cliente                                                                                  |
+| ivr_language             | ivr_detail   | Idioma seleccionado en la IVR                                                                                         |
+| steps_module             | ivr_detail   | Número de módulos por los que pasa la llamada                                                                         |
+| module_aggregation       | ivr_detail   | Lista de módulos por los que pasa la llamada                                                                          |
+| document_type            | ivr_detail   | Tipo de documento del cliente, si está disponible                                                                     |
+| document_identification  | ivr_detail   | Identificación del documento del cliente, si está disponible                                                           |
+| customer_phone           | ivr_detail   | Número de teléfono del cliente, si está disponible                                                                    |
+| billing_account_id       | ivr_detail   | ID de la cuenta de facturación del cliente, si está disponible                                                        |
+| masiva_lg                | ivr_detail   | Flag que indica si la llamada pasó por el módulo 'AVERIA_MASIVA' (1 para sí, 0 para no)                               |
+| info_by_phone_lg         | ivr_detail   | Flag que indica si el cliente fue identificado por su número de teléfono (1 para sí, 0 para no)                        |
+| info_by_dni_lg           | ivr_detail   | Flag que indica si el cliente fue identificado por su DNI (1 para sí, 0 para no)                                      |
+| repeated_phone_24H       | ivr_detail   | Flag que indica si el mismo número ha realizado una llamada en las últimas 24 horas (1 para sí, 0 para no)             |
+| cause_recall_phone_24H   | ivr_detail   | Flag que indica si el mismo número ha realizado una llamada en las 24 horas posteriores (1 para sí, 0 para no)         |
+
+Cada uno de estos campos se extrae o calcula a partir de los datos en la tabla `ivr_detail`, permitiendo un análisis más sencillo y focalizado de las
 
 ## Requisitos
 
