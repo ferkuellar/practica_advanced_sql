@@ -132,6 +132,26 @@ Estos son campos calculados que representan las fechas de inicio y finalización
 
 Estos campos son útiles para realizar análisis de series temporales o para unir la tabla `ivr_detail` con otras tablas que utilicen un formato de fecha similar.
 
+## Tabla ivr_summary
+
+La tabla `ivr_summary` es una versión resumida de la tabla `ivr_detail` y se crea para facilitar el análisis rápido y la generación de informes. Esta tabla se centra en los indicadores más importantes de cada llamada y, por tanto, contiene un solo registro por llamada.
+
+### Propósito
+
+El objetivo de la tabla `ivr_summary` es agilizar el análisis de KPIs (Indicadores Clave de Rendimiento) y ofrecer una vista simplificada de los datos de las llamadas. Esto es especialmente útil para stakeholders y analistas que necesitan acceder rápidamente a métricas clave sin tener que navegar a través de la gran cantidad de detalles en `ivr_detail`.
+
+### Características
+
+- **Un Registro por Llamada**: A diferencia de `ivr_detail`, que puede tener múltiples registros para una sola llamada en función de los distintos módulos y pasos, `ivr_summary` tiene un único registro para cada llamada.
+  
+- **Indicadores Clave**: Incluye campos como `ivr_id`, `phone_number`, `ivr_result`, `total_duration`, `customer_segment`, y otros que son críticos para el análisis del rendimiento del sistema IVR.
+
+### Relación con ivr_detail
+
+La tabla `ivr_summary` se deriva de la tabla `ivr_detail` y puede ser creada mediante consultas de agregación que resuman los campos relevantes de `ivr_detail` en un solo registro por `ivr_id`.
+
+
+
 ## Requisitos
 
 - Sistema de base de datos compatible con SQL
