@@ -6,10 +6,6 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 ## Índice
 
-# Índice
-
-## Índice
-
 - [Acceso a Tablas y Funciones en Google Cloud BigQuery](#acceso-a-tablas-y-funciones-en-google-cloud-bigquery)
 1. [Modelo de Datos](#modelo-de-datos)
    - [ivr_calls](#ivr_calls)
