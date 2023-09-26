@@ -239,7 +239,7 @@ Al utilizar esta función en sus consultas, puede estar seguro de que cualquier 
 1. **Clonar Repositorio**:
 
     ```bash
-    git clone https://github.com/tu_usuario/analisis_datos_ivr.git
+    git clone https://github.com/tu_usuario/practica_advanced_sql
     ```
 
 2. **Ejecutar Scripts de SQL**: Ejecuta los scripts de SQL en tu base de datos para crear las tablas y funciones.
