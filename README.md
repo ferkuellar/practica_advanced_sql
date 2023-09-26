@@ -64,6 +64,10 @@ El modelo de datos consta de las siguientes tablas:
 - Tabla de resumen con indicadores clave de rendimiento para cada llamada
 - Funciones de limpieza de datos para manejar datos faltantes o erróneos.
 
+---
+
+# Tabla ivr_detal
+
 ## Tabla ivr_detail
 
 La tabla `ivr_detail` es una tabla derivada que se crea a partir de las tablas `ivr_calls`, `ivr_modules` y `ivr_steps` del dataset `keepcoding`. Esta tabla ofrece una vista unificada de las interacciones de IVR, facilitando análisis más complejos y reportes. A continuación se detalla la relación entre estas tablas:
