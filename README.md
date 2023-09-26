@@ -85,7 +85,7 @@ El modelo de datos consta de las siguientes tablas:
 
 ## Contribuidores
 
-- [Tu nombre](https://github.com/tu_usuario)
+- [Fernando Cuellar](https://github.com/ferkuellar)
 
 ## Licencia
 
