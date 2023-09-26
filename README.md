@@ -117,6 +117,19 @@ La tabla `ivr_detail` consolidará los datos de las tablas `ivr_calls`, `ivr_mod
 | customer_phone           | ivr_steps    | Número de teléfono del cliente                              |
 | billing_account_id       | ivr_steps    | ID de la cuenta de facturación del cliente                  |
 
+### Campos Calculados en ivr_detail
+
+#### calls_start_date_id y calls_end_date_id
+
+Estos son campos calculados que representan las fechas de inicio y finalización de las llamadas, respectivamente, en un formato específico (yyyymmdd).
+
+| Campo              | Origen       | Descripción                                                                 |
+|--------------------|--------------|-----------------------------------------------------------------------------|
+| calls_start_date_id| ivr_calls    | Identificador calculado para la fecha de inicio de la llamada. Formato yyyymmdd. Ejemplo: `20230101` para el 1 de enero de 2023. |
+| calls_end_date_id  | ivr_calls    | Identificador calculado para la fecha de finalización de la llamada. Formato yyyymmdd. Ejemplo: `20230101` para el 1 de enero de 2023. |
+
+Estos campos son útiles para realizar análisis de series temporales o para unir la tabla `ivr_detail` con otras tablas que utilicen un formato de fecha similar.
+
 
 
 ## Requisitos
