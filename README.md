@@ -17,27 +17,6 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 El modelo de datos consta de las siguientes tablas:
 
-## Tabla ivr_detail
-
-La tabla `ivr_detail` es una tabla derivada que se crea a partir de las tablas `ivr_calls`, `ivr_modules` y `ivr_steps` del dataset `keepcoding`. Esta tabla ofrece una vista unificada de las interacciones de IVR, facilitando análisis más complejos y reportes. A continuación se detalla la relación entre estas tablas:
-
-### Origen de Datos
-
-- **ivr_calls**: Contiene datos referentes a las llamadas realizadas en el sistema IVR.
-- **ivr_modules**: Contiene datos sobre los diferentes módulos por los que pasa una llamada. Esta tabla se relaciona con `ivr_calls` a través del campo `ivr_id`.
-- **ivr_steps**: Contiene datos sobre los pasos específicos que realiza un usuario dentro de un módulo. Esta tabla se relaciona con `ivr_modules` a través de los campos `ivr_id` y `module_sequence`.
-
-### Relaciones
-
-- `ivr_calls.ivr_id` se relaciona con `ivr_modules.ivr_id`
-- `ivr_modules.ivr_id` y `ivr_modules.module_sequence` se relacionan con `ivr_steps.ivr_id` y `ivr_steps.module_sequence`, respectivamente.
-
-### Campos en ivr_detail
-
-Los campos en la tabla `ivr_detail` incluyen todos los campos relevantes de `ivr_calls`, `ivr_modules` y `ivr_steps`, permitiendo un análisis detallado de la experiencia del usuario en el sistema IVR.
-
-
-
 ### ivr_calls
 
 | Campo               | Descripción                                      |
@@ -83,7 +62,26 @@ Los campos en la tabla `ivr_detail` incluyen todos los campos relevantes de `ivr
 
 - Análisis detallado de la ruta de IVR para cada llamada
 - Tabla de resumen con indicadores clave de rendimiento para cada llamada
-- Funciones de limpieza de datos para manejar datos faltantes o erróneos
+- Funciones de limpieza de datos para manejar datos faltantes o erróneos.
+
+## Tabla ivr_detail
+
+La tabla `ivr_detail` es una tabla derivada que se crea a partir de las tablas `ivr_calls`, `ivr_modules` y `ivr_steps` del dataset `keepcoding`. Esta tabla ofrece una vista unificada de las interacciones de IVR, facilitando análisis más complejos y reportes. A continuación se detalla la relación entre estas tablas:
+
+### Origen de Datos
+
+- **ivr_calls**: Contiene datos referentes a las llamadas realizadas en el sistema IVR.
+- **ivr_modules**: Contiene datos sobre los diferentes módulos por los que pasa una llamada. Esta tabla se relaciona con `ivr_calls` a través del campo `ivr_id`.
+- **ivr_steps**: Contiene datos sobre los pasos específicos que realiza un usuario dentro de un módulo. Esta tabla se relaciona con `ivr_modules` a través de los campos `ivr_id` y `module_sequence`.
+
+### Relaciones
+
+- `ivr_calls.ivr_id` se relaciona con `ivr_modules.ivr_id`
+- `ivr_modules.ivr_id` y `ivr_modules.module_sequence` se relacionan con `ivr_steps.ivr_id` y `ivr_steps.module_sequence`, respectivamente.
+
+### Campos en ivr_detail
+
+Los campos en la tabla `ivr_detail` incluyen todos los campos relevantes de `ivr_calls`, `ivr_modules` y `ivr_steps`, permitiendo un análisis detallado de la experiencia del usuario en el sistema IVR.
 
 ## Requisitos
 
