@@ -208,6 +208,14 @@ La tabla `ivr_summary` contiene los siguientes campos:
 
 Cada uno de estos campos se extrae o calcula a partir de los datos en la tabla `ivr_detail`, permitiendo un análisis más sencillo y focalizado de las métricas clave de rendimiento del sistema IVR.
 
+### Campos adicionales en ivr_summary
+
+| Campo                 | Origen       | Descripción                                                                                                    |
+|-----------------------|--------------|----------------------------------------------------------------------------------------------------------------|
+| repeated_phone_24H    | ivr_detail   | Es un flag (0 o 1) que indica si ese mismo número ha realizado una llamada en las 24 horas anteriores.          |
+| cause_recall_phone_24H| ivr_detail   | Es un flag (0 o 1) que indica si ese mismo número ha realizado una llamada en las 24 horas posteriores.         |
+
+
 ## Función clean_integer
 
 ### Descripción
