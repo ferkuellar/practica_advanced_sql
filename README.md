@@ -11,6 +11,7 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 - [Tabla ivr_detail](#Tabla-ivr_detail)
 - [Campos Calculados ivr_detail](#Campos-Calculados-en-ivr_detail)
 - [Tabla ivr_summary](#Tabla-ivr_summary)
+- [Campos en ivr_summary](#Campos-en-ivr_summary)
 - [Requisitos](#requisitos)
 - [Uso](#uso)
 - [Contribuidores](#contribuidores)
@@ -178,7 +179,7 @@ La tabla `ivr_summary` contiene los siguientes campos:
 | repeated_phone_24H       | ivr_detail   | Flag que indica si el mismo número ha realizado una llamada en las últimas 24 horas (1 para sí, 0 para no)             |
 | cause_recall_phone_24H   | ivr_detail   | Flag que indica si el mismo número ha realizado una llamada en las 24 horas posteriores (1 para sí, 0 para no)         |
 
-Cada uno de estos campos se extrae o calcula a partir de los datos en la tabla `ivr_detail`, permitiendo un análisis más sencillo y focalizado de las
+Cada uno de estos campos se extrae o calcula a partir de los datos en la tabla `ivr_detail`, permitiendo un análisis más sencillo y focalizado de las métricas clave de rendimiento del sistema IVR.
 
 ## Requisitos
 
