@@ -85,6 +85,40 @@ La tabla `ivr_detail` es una tabla derivada que se crea a partir de las tablas `
 
 Los campos en la tabla `ivr_detail` incluyen todos los campos relevantes de `ivr_calls`, `ivr_modules` y `ivr_steps`, permitiendo un análisis detallado de la experiencia del usuario en el sistema IVR.
 
+### Campos en ivr_detail
+
+La tabla `ivr_detail` consolidará los datos de las tablas `ivr_calls`, `ivr_modules` y `ivr_steps`. A continuación se detalla cada campo de la tabla:
+
+| Campo                    | Origen       | Descripción                                                 |
+|--------------------------|--------------|-------------------------------------------------------------|
+| calls_ivr_id             | ivr_calls    | Identificador único de la llamada                           |
+| calls_phone_number       | ivr_calls    | Número de teléfono del cliente                              |
+| calls_ivr_result         | ivr_calls    | Resultado general de la llamada                             |
+| calls_vdn_label          | ivr_calls    | Etiqueta VDN asociada con la llamada                        |
+| calls_start_date         | ivr_calls    | Fecha y hora de inicio de la llamada                        |
+| calls_start_date_id      | ivr_calls    | Identificador de la fecha de inicio (formato yyyymmdd)      |
+| calls_end_date           | ivr_calls    | Fecha y hora de finalización de la llamada                  |
+| calls_end_date_id        | ivr_calls    | Identificador de la fecha de finalización (formato yyyymmdd) |
+| calls_total_duration     | ivr_calls    | Duración total de la llamada en segundos                    |
+| calls_customer_segment   | ivr_calls    | Segmento al que pertenece el cliente                        |
+| calls_ivr_language       | ivr_calls    | Idioma seleccionado en la IVR                               |
+| calls_steps_module       | ivr_calls    | Número de módulos por los que pasa la llamada               |
+| calls_module_aggregation | ivr_calls    | Lista de módulos por los que pasa la llamada                |
+| module_sequence          | ivr_modules  | Orden de aparición del módulo en la llamada                 |
+| module_name              | ivr_modules  | Nombre del módulo                                           |
+| module_duration          | ivr_modules  | Duración del módulo en segundos                             |
+| module_result            | ivr_modules  | Resultado del módulo                                        |
+| step_sequence            | ivr_steps    | Orden de aparición del paso en el módulo                    |
+| step_name                | ivr_steps    | Nombre del paso                                             |
+| step_result              | ivr_steps    | Resultado del paso                                          |
+| step_description_error   | ivr_steps    | Descripción del error en el paso, si aplica                 |
+| document_type            | ivr_steps    | Tipo de documento del cliente                               |
+| document_identification  | ivr_steps    | Identificación del documento del cliente                    |
+| customer_phone           | ivr_steps    | Número de teléfono del cliente                              |
+| billing_account_id       | ivr_steps    | ID de la cuenta de facturación del cliente                  |
+
+
+
 ## Requisitos
 
 - Sistema de base de datos compatible con SQL
