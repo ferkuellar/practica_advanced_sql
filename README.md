@@ -8,8 +8,9 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 - [Modelo de Datos](#modelo-de-datos)
 - [Características](#características)
-- [Tabla ivr_detail](#CamposCalculadosenivr_detail)
-- [Campos Calculados ivr_detail](#Tabla-ivr_detail)
+- [Tabla ivr_detail](#Tabla-ivr_detail)
+- [Campos Calculados ivr_detail](#Campos-Calculados-en-ivr_detail)
+- [Tabla ivr_summary](#Tabla-ivr_summary)
 - [Requisitos](#requisitos)
 - [Uso](#uso)
 - [Contribuidores](#contribuidores)
