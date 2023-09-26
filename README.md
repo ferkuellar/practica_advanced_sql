@@ -203,8 +203,6 @@ La tabla `ivr_summary` contiene los siguientes campos:
 | masiva_lg                | ivr_detail   | Flag que indica si la llamada pasó por el módulo 'AVERIA_MASIVA' (1 para sí, 0 para no)                               |
 | info_by_phone_lg         | ivr_detail   | Flag que indica si el cliente fue identificado por su número de teléfono (1 para sí, 0 para no)                        |
 | info_by_dni_lg           | ivr_detail   | Flag que indica si el cliente fue identificado por su DNI (1 para sí, 0 para no)                                      |
-| repeated_phone_24H       | ivr_detail   | Flag que indica si el mismo número ha realizado una llamada en las últimas 24 horas (1 para sí, 0 para no)             |
-| cause_recall_phone_24H   | ivr_detail   | Flag que indica si el mismo número ha realizado una llamada en las 24 horas posteriores (1 para sí, 0 para no)         |
 
 Cada uno de estos campos se extrae o calcula a partir de los datos en la tabla `ivr_detail`, permitiendo un análisis más sencillo y focalizado de las métricas clave de rendimiento del sistema IVR.
 
