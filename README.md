@@ -38,6 +38,7 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 Para acceder al proyecto en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:532ffec5d5d444b8a8ce5c8c03fc332b).
 
+Para acceder a **ivr_detail** en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:4b799dddb72a4d5a8171ea78c855f7d1)
 
 
 ## Modelo de Datos
