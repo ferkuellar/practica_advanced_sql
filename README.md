@@ -38,15 +38,17 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 
 
 
-Para acceder a **ivr_detail** en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:4b799dddb72a4d5a8171ea78c855f7d1).
+## Acceso a Tablas y Funciones en Google Cloud BigQuery
 
-Para acceder a **ivr_summary** en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:244fd80f9d5d46709a7fff2228459fbf).
+| Nombre del Recurso      | Enlace a Google Cloud BigQuery                                                                                           |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **ivr_detail**          | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:4b799dddb72a4d5a8171ea78c855f7d1)         |
+| **ivr_summary**         | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:244fd80f9d5d46709a7fff2228459fbf)         |
+| **ivr_summary_joined**  | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:d3a1437114c94adfa8dba2bb28417dc3)         |
+| **clean_integer**       | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:532ffec5d5d444b8a8ce5c8c03fc332b)         |
+| **ivr_repeated_calls**  | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:e87d3be66ad1464da37033ae5d91ba86)         |
 
-Para acceder a **ivr_summary_joined** en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:d3a1437114c94adfa8dba2bb28417dc3).
 
-Para acceder a **clean_integer** en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:532ffec5d5d444b8a8ce5c8c03fc332b).
-
-Para acceder a **ivr_repeated_calls** en Google Cloud BigQuery, haga clic [aquí](https://console.cloud.google.com/bigquery?sq=658206446308:e87d3be66ad1464da37033ae5d91ba86).
 
 ## Modelo de Datos
 
