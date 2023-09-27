@@ -231,7 +231,7 @@ La implementación de esta función en BigQuery podría ser algo similar a:
 
 ```sql
 CREATE OR REPLACE FUNCTION dataset_name.clean_integer(input INT64) AS (
-  IF(input IS NULL, -999999, input)
+  IFNULL(input, -999999)
 );
 ```
 
