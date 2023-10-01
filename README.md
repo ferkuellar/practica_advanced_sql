@@ -36,7 +36,7 @@ Este repositorio contiene scripts de SQL y conjuntos de datos para analizar sist
 | Nombre del Recurso      | Enlace a Google Cloud BigQuery                                                                                           |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | **ivr_detail**          | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:4b799dddb72a4d5a8171ea78c855f7d1).         |
-| **ivr_summary**         | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:ec3c2b15f10a44178c22a5e98d60a7a8).        |
+| **ivr_summary**         | [Haga clic aquí](https://console.cloud.google.com/bigquery?sq=658206446308:244fd80f9d5d46709a7fff2228459fbf).        |
 | **clean_integer**       | [Haga clic aquí](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!6m3!1skeepcoding-399320!2skeepcoding!3sclean_integer).        |
 
 
